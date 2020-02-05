@@ -139,8 +139,7 @@ class ModuleCopier:
                     # Don't use our exclude callback if we don't need to,
                     # as it slows things down.
                     shutil.copytree(
-                        pkgdir, dest,
-                        ignore=shutil.ignore_patterns('*.pyc')
+                        pkgdir, dest
                     )
             else:
                 shutil.copy2(file, target)

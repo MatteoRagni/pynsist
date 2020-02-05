@@ -81,7 +81,7 @@ def copytree_ignore_callback(excludes, pkgdir, modname, directory, files):
     target = os.path.join('pkgs', modname, reldir)
     files = [normalize_path(os.path.join(target, fname)) for fname in files]
     # Execute all patterns
-    for pattern in excludes + ['*.pyc']:
+    for pattern in excludes:
         ignored.update([
             os.path.basename(fname)
             for fname in fnmatch.filter(files, pattern)
